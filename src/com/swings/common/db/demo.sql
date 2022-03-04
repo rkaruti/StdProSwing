@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2022 at 02:01 PM
+-- Generation Time: Mar 04, 2022 at 05:28 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -38,12 +38,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `pass`) VALUES
-(100, 'Rose', 'Tiger'),
-(101, 'Vivek', 'Tiger1'),
-(1002, 'Ullas', 'tiger'),
-(1002, 'Ullas', 'tiger'),
-(1002, 'Ullas', 'tiger'),
-(1003, 'Ahbi', 'tiger');
+(1000, 'Rose', 'uItpSKVfotDVNeIt4g97tw=='),
+(1001, 'Vivek', 'uItpSKVfotDVNeIt4g97tw=='),
+(1003, 'Ahbi', 'ybSdaiOieZw7+LldG/e5WQ==');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
