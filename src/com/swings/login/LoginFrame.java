@@ -1,9 +1,13 @@
 package com.swings.login;
 
 import javax.swing.*;
+
+import com.swings.login.model.LoginModel;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class LoginFrame extends JFrame implements ActionListener {
 
@@ -63,7 +67,13 @@ public class LoginFrame extends JFrame implements ActionListener {
 			String pwdText;
 			userText = userTextField.getText();
 			pwdText = passwordField.getText();
-			if (userText.equalsIgnoreCase("admin") && pwdText.equals("admin")) {
+			
+			//ArrayList userList = new ArrayList();
+			LoginModel login = new LoginModel();
+			ArrayList userList = login.loginUser(userText, pwdText);
+			System.out.println("Users " + userList);
+			
+			if (!userList.isEmpty()) {
 				JOptionPane.showMessageDialog(this, "Login Successful");
 			} else {
 				JOptionPane.showMessageDialog(this, "Invalid Username or Password");

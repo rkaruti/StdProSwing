@@ -41,12 +41,12 @@ public class LoginModel {
 		try {
 			con = DBConnector.getDBConnection();
 			smt = con.createStatement(); 
-			String query = "SELECT USER_ID, FNAME, PASS FROM USERS WHERE USER_ID = " + uname + " AND PASS = '"
+			String query = "SELECT ID, NAME, PASS FROM USER WHERE ID = '" + uname + "' AND PASS = '"
 					+ password + "'";
 			System.out.println("Query " + query);
 			rs = smt.executeQuery(query); 
 			while (rs.next()) { 
-				name = rs.getString("fname");
+				name = rs.getString("name");
 				System.out.println("Name " + name);
 				list.add(name);
 			}
